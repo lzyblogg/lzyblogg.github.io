@@ -18,7 +18,7 @@
 <meta property="og:description" content="学习数通的第一天，啥也不会，选择这条路了就走下去吧！">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-04T06:58:19.712Z">
-<meta property="article:modified_time" content="2022-07-06T12:23:07.591Z">
+<meta property="article:modified_time" content="2022-07-07T10:02:59.255Z">
 <meta property="article:author" content="林友友啊！">
 <meta property="article:tag" content="网络基础 网络模型">
 <meta name="twitter:card" content="summary">
@@ -272,7 +272,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">853字</span>
+      <span class="post-count">851字</span>
     </span>
   </span>
 
@@ -294,8 +294,114 @@
     
     <p>学习数通的第一天，啥也不会，选择这条路了就走下去吧！</p>
 <span id="more"></span>
-<p>1、网络基础<br>    * 网络概述<br>        - 硬件方面：通过介质将网络设备和终端连接起来<br>        - 软件方面：操作系统、应用软件、应用程序互相通讯<br>        - 实现资源共享、信息传递<br>    * 网络组成<br>        - 发送方(Sender/Source)通过设备(Device)和协议(Protocol)和介质(Media)把数据报文(Message/Data)发送到有相应设备、协议、介质的接收方(Receiver/Destination)<br>    * 网络演进<br>        - 网络(network)，一组相互连接、通讯的网络<br>        - 互联网(internet)，多个互联互通的网络<br>        - 因特网(Internet)，互联全世界的网络<br>        - 物联网<br>    * Internet的组成<br>        - ISP(Internet Service Providers,因特网服务特供商)，像用户提供互联网接入业务、信息业务、增值业务，俗称运营商<br>    * 网络类型<br>        覆盖范围的不同，组网技术不同（二层）<br>        - PAN(Personal Area Network 个域网)<br>        - LAN(Local Area Network 局域网)<br>        - CAN(Campus Area Network 园区网)<br>        - MAN(Metropolitan Area Network 城域网)<br>        - WAN(Wide Area Network 广域网)<br>        - WLAN(Wireless Local Area Network 无线局域网)<br>        - WWAN(Wireless Wide Area Network 无线广域网)<br>    * 协议<br>        - 网路语言<br>        - 决定数据的格式和传输的规则<br>        - TCP/IP<br>    * 网络性能指标<br>        - 带宽(Bandwidth)，从一个节点到另一个节点的数据量。<br>        - 单位：bps(bit per second,比特每秒)，1B=8b<br>        - 延迟(delay)<br>            * 描述一个一个节点到另一个节点的时间，以ms为单位<br>    * 网络拓扑(topology)用来描绘网络结构(网络类型、设备类型、设备数量、线缆、带宽、服务、数据走向)的示意图<br>        - 拓扑类型：点到点、星型、全网状</p>
-<p>2、网络模型<br>    * 分层思想<br>        - 将复杂的流程分解为几个功能相对单一的子过程<br>        - 流程更加清晰，复杂问题简单化，更容易发现问题并针对性的解决问题<br>    * 网络标准化<br>        - 全球使用协议一致  TCP/IP<br>    * 两大模型<br>        - OSI模型 Open System Interconnect 开放系统互连参考模型，有ISO(国际标准化组织)定义。<br>            * 应用层：为应用程序提供网络服务<br>            * 表示层：数据格式化、加密、解密<br>            * 会话层：建立、维护、管理会话链接<br>            * 传输层：建立、维护、管理端到端连接<br>            * 网络层：ip寻址和路由选择<br>            * 数据链路层：控制网络层和物理层直接的通信<br>            * 物理层：比特流传输<br>        - TCP/IP                 协议<br>            * 应用层：              HTTP FTP TFTP SMTP SNMP DNS<br>            * 传输层（段）            TCP UDP<br>            * 网络层（包）            ICMP IP ARP<br>            * 数据链层（帧）<br>            * 物理层（比特）<br>    * 数据封装和解封<br>        - 应用数据需要经过每一层处理之后才能通过网络传输到目的端<br>        - OSI把每一层数据称为PDU(Protocol Data Unit，协议数据单元)<br>        - TCP/IP根据不同层分别使用了段、包、帧、比特<br>        - 逐层向下传递数据，并添加报头和报尾的过程称为封装<br>        - 反之，接收方需要逐层向上传递数据，称为解封<br>    * 应用层<br>        - TCP/IP模型的最高层<br>        - 直接为应用程序提供网络服务<br>        - 常用协议：DNS\HTTP\SMTP与POP3\IMAP\TELNET\FTP\TFTP<br>            DNS:域名解析<br>                - 建立ip地址与域名之间的映射关系<br>                - 将域名和IP地址互相解析<br>                - nslookup:DNS调试工具<br>                - ipconfig/displaydns:查看DNS缓存<br>                - ipconfig/flushdns:清空DNS缓存</p>
+<ul>
+<li><h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><ul>
+<li><h3 id="网络概述"><a href="#网络概述" class="headerlink" title="网络概述"></a>网络概述</h3><ul>
+<li>硬件方面：通过介质将网络设备和终端连接起来</li>
+<li>软件方面：操作系统、应用软件、应用程序互相通讯</li>
+<li>实现资源共享、信息传递</li>
+</ul>
+</li>
+<li><h3 id="网络组成"><a href="#网络组成" class="headerlink" title="网络组成"></a>网络组成</h3><ul>
+<li>发送方(Sender/Source)通过设备(Device)和协议(Protocol)和介质(Media)把数据报文(Message/Data)发送到有相应设备、协议、介质的接收方(Receiver/Destination)</li>
+</ul>
+</li>
+<li><h3 id="网络演进"><a href="#网络演进" class="headerlink" title="网络演进"></a>网络演进</h3><ul>
+<li>网络(network)，一组相互连接、通讯的网络</li>
+<li>互联网(internet)，多个互联互通的网络</li>
+<li>因特网(Internet)，互联全世界的网络</li>
+<li>物联网</li>
+</ul>
+</li>
+<li><h3 id="Internet的组成"><a href="#Internet的组成" class="headerlink" title="Internet的组成"></a>Internet的组成</h3><ul>
+<li>ISP(Internet Service Providers,因特网服务特供商)，像用户提供互联网接入业务、信息业务、增值业务，俗称运营商</li>
+</ul>
+</li>
+<li><h3 id="网络类型"><a href="#网络类型" class="headerlink" title="网络类型"></a>网络类型</h3>  覆盖范围的不同，组网技术不同（二层）<ul>
+<li>PAN(Personal Area Network 个域网)</li>
+<li>LAN(Local Area Network 局域网)</li>
+<li>CAN(Campus Area Network 园区网)</li>
+<li>MAN(Metropolitan Area Network 城域网)</li>
+<li>WAN(Wide Area Network 广域网)</li>
+<li>WLAN(Wireless Local Area Network 无线局域网)</li>
+<li>WWAN(Wireless Wide Area Network 无线广域网)</li>
+</ul>
+</li>
+<li><h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><ul>
+<li>网路语言</li>
+<li>决定数据的格式和传输的规则</li>
+<li>TCP/IP</li>
+</ul>
+</li>
+<li><h3 id="网络性能指标"><a href="#网络性能指标" class="headerlink" title="网络性能指标"></a>网络性能指标</h3><ul>
+<li>带宽(Bandwidth)，从一个节点到另一个节点的数据量。</li>
+<li>单位：bps(bit per second,比特每秒)，1B=8b</li>
+<li>延迟(delay)<ul>
+<li>描述一个一个节点到另一个节点的时间，以ms为单位</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="网络拓扑-topology-用来描绘网络结构-网络类型、设备类型、设备数量、线缆、带宽、服务、数据走向-的示意图"><a href="#网络拓扑-topology-用来描绘网络结构-网络类型、设备类型、设备数量、线缆、带宽、服务、数据走向-的示意图" class="headerlink" title="网络拓扑(topology)用来描绘网络结构(网络类型、设备类型、设备数量、线缆、带宽、服务、数据走向)的示意图"></a>网络拓扑(topology)用来描绘网络结构(网络类型、设备类型、设备数量、线缆、带宽、服务、数据走向)的示意图</h3><ul>
+<li>拓扑类型：点到点、星型、全网状</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h1><ul>
+<li><h3 id="分层思想"><a href="#分层思想" class="headerlink" title="分层思想"></a>分层思想</h3><ul>
+<li>将复杂的流程分解为几个功能相对单一的子过程</li>
+<li>流程更加清晰，复杂问题简单化，更容易发现问题并针对性的解决问题</li>
+</ul>
+</li>
+<li><h3 id="网络标准化"><a href="#网络标准化" class="headerlink" title="网络标准化"></a>网络标准化</h3><ul>
+<li>全球使用协议一致  TCP/IP</li>
+</ul>
+</li>
+<li><h3 id="两大模型"><a href="#两大模型" class="headerlink" title="两大模型"></a>两大模型</h3><ul>
+<li>OSI模型 Open System Interconnect 开放系统互连参考模型，有ISO(国际标准化组织)定义。<ul>
+<li>应用层：为应用程序提供网络服务</li>
+<li>表示层：数据格式化、加密、解密</li>
+<li>会话层：建立、维护、管理会话链接</li>
+<li>传输层：建立、维护、管理端到端连接</li>
+<li>网络层：ip寻址和路由选择</li>
+<li>数据链路层：控制网络层和物理层直接的通信</li>
+<li>物理层：比特流传输</li>
+</ul>
+</li>
+<li>TCP/IP                 协议<ul>
+<li>应用层：              HTTP FTP TFTP SMTP SNMP DNS</li>
+<li>传输层（段）            TCP UDP</li>
+<li>网络层（包）            ICMP IP ARP</li>
+<li>数据链层（帧）</li>
+<li>物理层（比特）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="数据封装和解封"><a href="#数据封装和解封" class="headerlink" title="数据封装和解封"></a>数据封装和解封</h3><ul>
+<li>应用数据需要经过每一层处理之后才能通过网络传输到目的端</li>
+<li>OSI把每一层数据称为PDU(Protocol Data Unit，协议数据单元)</li>
+<li>TCP/IP根据不同层分别使用了段、包、帧、比特</li>
+<li>逐层向下传递数据，并添加报头和报尾的过程称为封装</li>
+<li>反之，接收方需要逐层向上传递数据，称为解封</li>
+</ul>
+</li>
+<li><h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><ul>
+<li>TCP/IP模型的最高层</li>
+<li>直接为应用程序提供网络服务</li>
+<li>常用协议：DNS\HTTP\SMTP与POP3\IMAP\TELNET\FTP\TFTP<br>  DNS:域名解析<pre><code>  - 建立ip地址与域名之间的映射关系
+  - 将域名和IP地址互相解析
+  - nslookup:DNS调试工具
+  - ipconfig/displaydns:查看DNS缓存
+  - ipconfig/flushdns:清空DNS缓存
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
     
 
@@ -425,15 +531,20 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/06/04/Java%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/07/07/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A7%86%E9%A2%91%E6%8E%A8%E8%8D%90/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Java第一天学习笔记，Java的发展史、Java的特性、Java的编译、执行Java程序
+          我在b站发布了视频，快去观看，记得三连加关注哦！
         
       </div>
     </a>
   
+  
+    <a href="/2022/06/04/Java%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java第一天学习笔记，Java的发展史、Java的特性、Java的编译、执行Java程序</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -458,7 +569,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">网络基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0"><span class="toc-number">1.0.1.</span> <span class="toc-text">网络概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%BB%84%E6%88%90"><span class="toc-number">1.0.2.</span> <span class="toc-text">网络组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%BC%94%E8%BF%9B"><span class="toc-number">1.0.3.</span> <span class="toc-text">网络演进</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Internet%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-number">1.0.4.</span> <span class="toc-text">Internet的组成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.0.5.</span> <span class="toc-text">网络类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.0.6.</span> <span class="toc-text">协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="toc-number">1.0.7.</span> <span class="toc-text">网络性能指标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91-topology-%E7%94%A8%E6%9D%A5%E6%8F%8F%E7%BB%98%E7%BD%91%E7%BB%9C%E7%BB%93%E6%9E%84-%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B%E3%80%81%E8%AE%BE%E5%A4%87%E7%B1%BB%E5%9E%8B%E3%80%81%E8%AE%BE%E5%A4%87%E6%95%B0%E9%87%8F%E3%80%81%E7%BA%BF%E7%BC%86%E3%80%81%E5%B8%A6%E5%AE%BD%E3%80%81%E6%9C%8D%E5%8A%A1%E3%80%81%E6%95%B0%E6%8D%AE%E8%B5%B0%E5%90%91-%E7%9A%84%E7%A4%BA%E6%84%8F%E5%9B%BE"><span class="toc-number">1.0.8.</span> <span class="toc-text">网络拓扑(topology)用来描绘网络结构(网络类型、设备类型、设备数量、线缆、带宽、服务、数据走向)的示意图</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">网络模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%B1%82%E6%80%9D%E6%83%B3"><span class="toc-number">2.0.1.</span> <span class="toc-text">分层思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%A0%87%E5%87%86%E5%8C%96"><span class="toc-number">2.0.2.</span> <span class="toc-text">网络标准化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E5%A4%A7%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.0.3.</span> <span class="toc-text">两大模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85%E5%92%8C%E8%A7%A3%E5%B0%81"><span class="toc-number">2.0.4.</span> <span class="toc-text">数据封装和解封</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="toc-number">2.0.5.</span> <span class="toc-text">应用层</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -627,11 +738,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络基础 网络模型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">哔哩哔哩</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络基础 网络模型</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
             <div class="clearfix"></div>
