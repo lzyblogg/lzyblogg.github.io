@@ -6,17 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 网络基础 网络模型 | 林友友的主页呀！</title>
+  <title>林友友的主页呀！</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="海内存知己">
-<meta property="og:type" content="website">
+  <meta name="description" content="title: Java学习第一天，Java的发展史，Java特性、使用、编译tags: Javatags: Java的特性  这是我学习Java的时候做的一些笔记，也希望大家多多致辞，后续会尽快做出评论系统给大家使用，这样子大家就可以愉快的讨论啦！">
+<meta property="og:type" content="article">
 <meta property="og:title" content="林友友的主页呀！">
-<meta property="og:url" content="http://example.com/tags/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80-%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:url" content="http://example.com/2022/06/03/JAVA%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="林友友的主页呀！">
-<meta property="og:description" content="海内存知己">
+<meta property="og:description" content="title: Java学习第一天，Java的发展史，Java特性、使用、编译tags: Javatags: Java的特性  这是我学习Java的时候做的一些笔记，也希望大家多多致辞，后续会尽快做出评论系统给大家使用，这样子大家就可以愉快的讨论啦！">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-03T05:48:19.275Z">
+<meta property="article:modified_time" content="2022-07-07T02:12:44.261Z">
 <meta property="article:author" content="林友友啊！">
 <meta name="twitter:card" content="summary">
   
@@ -236,65 +238,188 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JAVA笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+  <div class="article-entry" itemprop="articleBody">
     
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
+    <hr>
+<p>title: Java学习第一天，Java的发展史，Java特性、使用、编译<br>tags: Java<br>tags: Java的特性</p>
+<hr>
+<p>这是我学习Java的时候做的一些笔记，也希望大家多多致辞，后续会尽快做出评论系统给大家使用，这样子大家就可以愉快的讨论啦！</p>
+<span id="more"></span>
+<p>第一章<br>    1、java语言发展史：<br>        * Java语言诞生于1995年。<br>        * 其实在1995年之前SUN公司（太阳微电子公司：该公司目前被Oracle(甲骨文：做数据库的)收购了）<br>        为了占领只能电子消费产品市场，派James Gosling领导团队开发了一个Oak(橡树)语言。<br>        * 1996年：JDK1.0诞生<br>            —— 什么是JDK？<br>                Java开发工具包<br>                做java开发必须安装的一个工具包，该工具包需要去官网下载。<br>                目前SUN被Oracle收购了，所以下载需要去Oracle下载。<a target="_blank" rel="noopener" href="http://www.oracle.com/">http://www.oracle.com</a><br>        * 目前JDK最高版本是：Java8/JDK1.8/JDK8<br>        * JAVA包括三大块：<br>            - JavaSE (Java标准版)<br>            - JavaEE (Java企业版)<br>            - JavaME (Java微型版)<br>            其中JavaSE是基础，以后主攻方向是JavaEE方向。<br>    2、Java语言特性 【开源、简单、强大、纯面向对象】<br>        * 简单性<br>            相对而言的，例如Java中不再支持多继承，c++是支持多继承的，多继承比较复杂,c++中有指针，Java中屏蔽了指针的概念。<br>            所以相对来说Java是简单的。java语言底层是c++实现的，不是c语言。<br>        * 面向对象：<br>            Java是纯面向对象的。更符合人的思维模式，更容易理解。<br>        * 可移植性<br>            - 什么是可移植性：<br>                Java程序可以做到一次编译，到处运行,也就是说Java程序可以在不同系统上运行，可以做到跨平台使用，这就称为Java的可移植性<br>            - Windows和Linux内核肯定不同，他们两个操作系统执行指令的执行也是不一样的<br>            - 结论：显然Java程序不能直接和操作系统打交道，因为Java程序只有一份，操作系统执行原理和方式不同.解决办法就是引入一个介质JVM：SUN的团队很聪明，他们想到了一个办法，他们让Java程序运行在一台虚拟机当中，这个虚拟机叫做Java虚拟机，简称JVM。Java虚拟机再和底层的操作系统打交道。也就是官网下载的JDK包，里面包括了Java程序的所需的工具。<br>        * 健壮性<br>            和自动垃圾回收机制有关，自动垃圾回收机制简称GC机制。Java语言运行过程中产生的垃圾是自动回收的，不需要程序员关心。<br>        * 安全性<br>        * 多线程<br>        ……<br>    3、关于Java的加载与执行<br>        * Java程序的运行包括两个非常重要的阶段<br>            - 编译阶段<br>                编译阶段主要的任务是检查Java源程序是否符合Java语法，符合Java语法规则能够生成正常的字节码文件(xxx.class),不符合Java语法规则则无法生成字节码文件。<br>                - 字节码文件中不是纯粹的二进制，这种文件无法在操作系统当中直接执行。<br>                - 编译阶段的过程：<br>                    * 程序员需要在硬盘的某个位置新建一个.Java扩展名的文件，该文件被称为Java源文件，源文件当中编写的是Java源代码/源程序。而这个源程序是不能随意编写的，必须符合Java语法规则&lt;Java语法规则是需要记忆的&gt;<br>                    * Java程序员需要使用JDK当中自带的Javac.exe命令进行Java程序的编译,一个Java源文件可以编译生成多个.class文件<br>                    * Javac怎么用呢？在哪用？<br>                        - 在DOS命令窗口使用<br>                        - Javac的使用规则：Javac Java源文件的路径<br>                        - Javac是一个Java编译器工具/命令<br>                    * 字节码文件/class文件是最终要执行的文件，所以说class文件生成之后，Java源文件删除并不会影响Java程序的执行。但是一般Java源程序不要删除，因为class文件最终执行效果可能不是我们想要的，那么这个时候需要修改Java源程序，然后将Java源程序重新编译生成新的class文件，然后再运行这个class程序，生成新的效果。<br>                    * 编译结束后，也可以将class文件拷贝到其他操作系统执行<br>            - 运行阶段<br>                - JDK安装之后，除了自带一个Javac.exe之外，还有另一个工具/命令，叫做java.exe，主要负责运行阶段<br>                    * 在DOS窗口使用<br>                    * java.exe怎么用呢？<br>                        java 类名(这个位置不是一个路径)<br>                        例如：<br>                            在硬盘上有一个A.class，那么就这样用：Java A<br>                            在硬盘上有一个B.class，那么就这样用：Java B.class【错误】<br>                - 运行阶段的过程：<br>                    * 打开DOS窗口，切换到.class字节码文件当前目录下<br>                    * 输入：java xx(.class字节码文件名称，后缀不用带)<br>                    * Java.exe命令会启动Java虚拟机(JVM),JVM会启动类加载器ClassLoader<br>                    * ClassLoader 会去硬盘上搜索A.class文件，找到该文件则将该文件装在到JVM当中。<br>                    * JVM将A.class字节码文件解释成二进制的数据，然后操作系统执行二进制和底层硬件平台进行交互。<br>    4、开始第一个Java程序<br>        * 保证电脑上安装了文本编辑器<br>        * 安装JDK，这里我使用的是JDk8<br>        * JDK、JRE、JVM的关系：JDK包含了JRE，JRE包含了JVM<br>        * 开发Hello World.Java源程序<br>        * 将Hello World.Java源程序通过Javac工具编译<br>            - 首先需要解决的问题是：Javac命令是否可用<br>            - 打开DOS命令窗口，直接输入Javac，然后回车。<br>                * Windows操作系统提示出现错误“Javac不是内部命令”，出现这个问题是Windows找不到Javac，可以通过配置环境变量去解决该问题。<br>                * macos操作系统会直接可用。<br>                * Linux未知<br>        * 运行Java程序<br>            - 需要使用Java.exe命令<br>            - 首先测试Java命令是否可用<br>            - 然后将DOS窗口切换到.class文件的当前目录下<br>            - 最后运行.class文件<br>    5、打开DOS窗口，执行Java HelloWorld，执行原理是什么？<br>        * Java.exe命令会启动JVM<br>        * JVM启动之后会启动类加载器ClassLoader<br>        * ClassLoader会在硬盘上的某个位置搜索HelloWorld.class字节码文件<br>        * 找到该文件则执行<br>        * 找不到文件则报错<br>        疑问：ClassLoader是在哪个位置上搜搜HelloWorld.class字节码文件的？<br>            * 默认情况下，ClassLoader去某个路径下加载xxx.class字节码文件。当然，也可以让ClassLoader去某个指定的路径下加载字节码文件，这时需要配置环境变量classpath<br>            * classpath环境变量属于Java语言中的环境变量，不属于windows操作系统【PATH环境变量属于操作系统】<br>            * classpath是给ClassLoader类加载器指路的<br>            * 设置环境变量打开DOS窗口在任意位置都可以执行.class文件<br>            * classpath环境变量没有配置的话，类加载器会默认从当前路径下找字节码文件，当classpath环境变量配置为某个指定路径之后，类加载器只会去指定的路径加载字节码文件。<br>            * 所以每次执行.class程序时，需要在DOS窗口先切到.class字节码文件所在的路径下，然后再运行。<br>            * classpath=.<br>                注意：路径中 . 表示上级目录；路径中 .. 表示当前目录<br>    6、关于Java语言当中的注释<br>        * 什么是注释？注释的作用是什么？<br>            - 出现在Java的源文件当中，对Java源代码的解释说明<br>            - 注释不会被编译到.class字节码文件当中<br>            - 一个好的开发习惯应该是多编写注释，这样程序的可读性增强。<br>        * Java中的注释怎么写<br>            - 单行注释<br>                //单行注释<br>            - 多行注释<br>                /*<br>                    多行注释<br>                    多行注释<br>                * /<br>            - Javadoc注释，该注释信息会通过Javadoc.exe工具解析提取到文档当中<br>                /**<br>                *    Javadoc注释<br>                *    Javadoc注释<br>                * /<br>    7、对HelloWorld程序进行解释：<br>        public class HelloWorld{<br>            public static void main(String[] args) {<br>                System.out.println(“编写第一个Hello World!”);<br>        }<br>            //public表示公开的<br>            //class表示定义一个类<br>            //HelloWorld表示一个类名<br>            public class HelloWorld{ //表示定义一个公开的类，起名HelloWorld<br>                //类体，类体中不允许编写Java语句。【除了声明变量】<br>                /*<br>                    public表示公开的<br>                    static表示静态的<br>                    void表示空<br>                    main表示方法名是main<br>                    (string[] args)是一个main方法的形式参数列表，其中args表示的是一个名字，可以随便写，一般都写args<br>                    需要记住的是：<br>                        以下的方法是一个程序的“主方法”，程序的执行入口，是sun公司规定的，固定编写方式。<br>                * /<br>                public static void main(String[] args) { //表示定义一个公开的静态的主方法<br>                    //方法体<br>                    //Java语句【Java语句以“;“终止，分号必须是半角分号】<br>                    //先记住：以下这样的代码的作用是向控制台输出一段消息<br>                    //以下的双引号必须是半角的双引号【是Java语法的一部分】<br>                    //Java中所有的“字符串”都使用双引号括起来。<br>                    System.out.println(“编写第一个Hello World!”);<br>                    //注意：这里的程序员的双引号是全角双引号<br>                    System.out.println(“我是一个“程序猿””)<br>                }<br>            }<br>    8、public class 和 class的区别：<br>        * 一个Java源文件当中可以定义多个class文件<br>        * 一个Java源文件当中public的class不是必须的<br>        * 一个class会定义生成一个xxx.class字节码文件<br>        * 一个Java源文件当中定义一个公开的类的话，public的class只能有一个，并且该类名必须和Java源文件名称一致。<br>        * 每一个class当中都可以编写main方法，都可以设定程序的入口。<br>            注意：.class当中必须有主方法，没有主方法会出现运行阶段的错误。<br>总结第一章内容：<br>    * 能够自己搭建Java的开发环境<br>    * 能够独立编写HelloWorld程序，编译并运行<br>    * 掌握环境变量path的原理以及如何配置<br>    * 掌握环境变量classpath的原理以及如何配资<br>    * Java中的注释<br>    * public class 和 class 的区别</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-        <div class="archives">
+      </a>
+    </div>
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/06/04/HCIA%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2022-06-04T06:58:19.712Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-06-04</time>
-</a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/06/04/HCIA%E7%AC%94%E8%AE%B0/" target="_blank">数通工程师第一天，HCIA、HCIP、HCIE学习笔记</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          林友友啊！
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2022/06/03/JAVA笔记/" title="" target="_blank">http://example.com/2022/06/03/JAVA笔记/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">网络基础 网络模型</a>
-        		</li>
-      		
-		</ul>
-	</div>
+          未经允许不得用于商业使用
+        </li>
+        
+      </ul>
+    </div>
+    
 
-          
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/06/03/JAVA%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+
+<nav id="article-nav">
+  
+    <a href="/2022/06/04/HCIA%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          数通工程师第一天，HCIA、HCIP、HCIE学习笔记
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -335,9 +460,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
