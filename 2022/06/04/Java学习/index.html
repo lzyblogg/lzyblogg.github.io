@@ -18,7 +18,7 @@
 <meta property="og:description" content="这是我学习Java的时候做的一些笔记，也希望大家多多致辞，后续会尽快做出评论系统给大家使用，这样子大家就可以愉快的讨论啦！">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-06-04T06:58:19.712Z">
-<meta property="article:modified_time" content="2022-07-07T10:04:28.415Z">
+<meta property="article:modified_time" content="2022-07-07T12:08:59.079Z">
 <meta property="article:author" content="林友友啊！">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -295,126 +295,189 @@
     <p>这是我学习Java的时候做的一些笔记，也希望大家多多致辞，后续会尽快做出评论系统给大家使用，这样子大家就可以愉快的讨论啦！</p>
 <span id="more"></span>
 <ul>
-<li><h1 id="java语言发展史："><a href="#java语言发展史：" class="headerlink" title="java语言发展史："></a>java语言发展史：</h1><pre><code>  * Java语言诞生于1995年。
-  * 其实在1995年之前SUN公司（太阳微电子公司：该公司目前被Oracle(甲骨文：做数据库的)收购了）
-  为了占领只能电子消费产品市场，派James Gosling领导团队开发了一个Oak(橡树)语言。
-  * 1996年：JDK1.0诞生
-      — 什么是JDK？
-          Java开发工具包
-          做java开发必须安装的一个工具包，该工具包需要去官网下载。
-          目前SUN被Oracle收购了，所以下载需要去Oracle下载。http://www.oracle.com
-  * 目前JDK最高版本是：Java8/JDK1.8/JDK8
-  * JAVA包括三大块：
-      - JavaSE 标准版
-      - JavaEE 企业版
-      - JavaME 微型版
-      其中JavaSE是基础，以后主攻方向是JavaEE方向。
-</code></pre>
+<li><h1 id="java语言发展史："><a href="#java语言发展史：" class="headerlink" title="java语言发展史："></a>java语言发展史：</h1><ul>
+<li>Java语言诞生于1995年。</li>
+<li>其实在1995年之前SUN公司（太阳微电子公司：该公司目前被Oracle(甲骨文：做数据库的)收购了）<br>为了占领只能电子消费产品市场，派James Gosling领导团队开发了一个Oak(橡树)语言。</li>
+<li>1996年：JDK1.0诞生<ul>
+<li>什么是JDK？<ul>
+<li>Java开发工具包</li>
+<li>做java开发必须安装的一个工具包，该工具包需要去官网下载。</li>
+<li>目前SUN被Oracle收购了，所以下载需要去Oracle下载。<a target="_blank" rel="noopener" href="http://www.oracle.com/">http://www.oracle.com</a></li>
+</ul>
 </li>
-<li><h1 id="Java语言特性-【开源、简单、强大、纯面向对象】"><a href="#Java语言特性-【开源、简单、强大、纯面向对象】" class="headerlink" title="Java语言特性 【开源、简单、强大、纯面向对象】"></a>Java语言特性 【开源、简单、强大、纯面向对象】</h1><pre><code>  * 简单性
-      相对而言的，例如Java中不再支持多继承，c++是支持多继承的，多继承比较复杂,c++中有指针，Java中屏蔽了指针的概念。
-      所以相对来说Java是简单的。java语言底层是c++实现的，不是c语言。
-  * 面向对象：
-      Java是纯面向对象的。更符合人的思维模式，更容易理解。
-  * 可移植性
-      - 什么是可移植性：
-          Java程序可以做到一次编译，到处运行,也就是说Java程序可以在不同系统上运行，可以做到跨平台使用，这就称为Java的可移植性
-      - Windows和Linux内核肯定不同，他们两个操作系统执行指令的执行也是不一样的
-      - 结论：显然Java程序不能直接和操作系统打交道，因为Java程序只有一份，操作系统执行原理和方式不同.解决办法就是引入一个介质JVM：SUN的团队很聪明，他们想到了一个办法，他们让Java程序运行在一台虚拟机当中，这个虚拟机叫做Java虚拟机，简称JVM。Java虚拟机再和底层的操作系统打交道。也就是官网下载的JDK包，里面包括了Java程序的所需的工具。
-  * 健壮性
-      和自动垃圾回收机制有关，自动垃圾回收机制简称GC机制。Java语言运行过程中产生的垃圾是自动回收的，不需要程序员关心。
-  * 安全性
-  * 多线程
-</code></pre>
+</ul>
 </li>
-<li><h1 id="关于Java的加载与执行"><a href="#关于Java的加载与执行" class="headerlink" title="关于Java的加载与执行"></a>关于Java的加载与执行</h1><pre><code>  * Java程序的运行包括两个非常重要的阶段
-      - 编译阶段
-          编译阶段主要的任务是检查Java源程序是否符合Java语法，符合Java语法规则能够生成正常的字节码文件(xxx.class),不符合Java语法规则则无法生成字节码文件。
-          - 字节码文件中不是纯粹的二进制，这种文件无法在操作系统当中直接执行。
-          - 编译阶段的过程：
-              * 程序员需要在硬盘的某个位置新建一个.Java扩展名的文件，该文件被称为Java源文件，源文件当中编写的是Java源代码/源程序。而这个源程序是不能随意编写的，必须符合Java语法规则-Java语法规则是需要记忆的
-              * Java程序员需要使用JDK当中自带的Javac.exe命令进行Java程序的编译,一个Java源文件可以编译生成多个.class文件
-              * Javac怎么用呢？在哪用？
-                  - 在DOS命令窗口使用
-                  - Javac的使用规则：Javac Java源文件的路径
-                  - Javac是一个Java编译器工具/命令
-              * 字节码文件/class文件是最终要执行的文件，所以说class文件生成之后，Java源文件删除并不会影响Java程序的执行。但是一般Java源程序不要删除，因为class文件最终执行效果可能不是我们想要的，那么这个时候需要修改Java源程序，然后将Java源程序重新编译生成新的class文件，然后再运行这个class程序，生成新的效果。
-              * 编译结束后，也可以将class文件拷贝到其他操作系统执行
-      - 运行阶段
-          - JDK安装之后，除了自带一个Javac.exe之外，还有另一个工具/命令，叫做java.exe，主要负责运行阶段
-              * 在DOS窗口使用
-              * java.exe怎么用呢？
-                  java 类名(这个位置不是一个路径)
-                  例如：
-                      在硬盘上有一个A.class，那么就这样用：Java A
-                      在硬盘上有一个B.class，那么就这样用：Java B.class【错误】
-          - 运行阶段的过程：
-              * 打开DOS窗口，切换到.class字节码文件当前目录下
-              * 输入：java xx(.class字节码文件名称，后缀不用带)
-              * Java.exe命令会启动Java虚拟机(JVM),JVM会启动类加载器ClassLoader
-              * ClassLoader 会去硬盘上搜索A.class文件，找到该文件则将该文件装在到JVM当中。
-              * JVM将A.class字节码文件解释成二进制的数据，然后操作系统执行二进制和底层硬件平台进行交互。
-</code></pre>
+<li>目前JDK最高版本是：Java8/JDK1.8/JDK8</li>
+<li>JAVA包括三大块：<ul>
+<li>JavaSE 标准版</li>
+<li>JavaEE 企业版</li>
+<li>JavaME 微型版<br>其中JavaSE是基础，以后主攻方向是JavaEE方向。</li>
+</ul>
 </li>
-<li><h1 id="开始第一个Java程序"><a href="#开始第一个Java程序" class="headerlink" title="开始第一个Java程序"></a>开始第一个Java程序</h1><pre><code>  * 保证电脑上安装了文本编辑器
-  * 安装JDK，这里我使用的是JDk8
-  * JDK、JRE、JVM的关系：JDK包含了JRE，JRE包含了JVM
-  * 开发Hello World.Java源程序
-  * 将Hello World.Java源程序通过Javac工具编译
-      - 首先需要解决的问题是：Javac命令是否可用
-      - 打开DOS命令窗口，直接输入Javac，然后回车。
-          * Windows操作系统提示出现错误“Javac不是内部命令”，出现这个问题是Windows找不到Javac，可以通过配置环境变量去解决该问题。
-          * macos操作系统会直接可用。
-          * Linux未知
-  * 运行Java程序
-      - 需要使用Java.exe命令
-      - 首先测试Java命令是否可用
-      - 然后将DOS窗口切换到.class文件的当前目录下
-      - 最后运行.class文件
-</code></pre>
+</ul>
 </li>
-<li><h1 id="打开DOS窗口，执行Java-HelloWorld，执行原理是什么？"><a href="#打开DOS窗口，执行Java-HelloWorld，执行原理是什么？" class="headerlink" title="打开DOS窗口，执行Java HelloWorld，执行原理是什么？"></a>打开DOS窗口，执行Java HelloWorld，执行原理是什么？</h1><pre><code>  * Java.exe命令会启动JVM
-  * JVM启动之后会启动类加载器ClassLoader
-  * ClassLoader会在硬盘上的某个位置搜索HelloWorld.class字节码文件
-  * 找到该文件则执行
-  * 找不到文件则报错
-  疑问：ClassLoader是在哪个位置上搜搜HelloWorld.class字节码文件的？
-      * 默认情况下，ClassLoader去某个路径下加载xxx.class字节码文件。当然，也可以让ClassLoader去某个指定的路径下加载字节码文件，这时需要配置环境变量classpath
-      * classpath环境变量属于Java语言中的环境变量，不属于windows操作系统【PATH环境变量属于操作系统】
-      * classpath是给ClassLoader类加载器指路的
-      * 设置环境变量打开DOS窗口在任意位置都可以执行.class文件
-      * classpath环境变量没有配置的话，类加载器会默认从当前路径下找字节码文件，当classpath环境变量配置为某个指定路径之后，类加载器只会去指定的路径加载字节码文件。
-      * 所以每次执行.class程序时，需要在DOS窗口先切到.class字节码文件所在的路径下，然后再运行。
-      * classpath=.
-          注意：路径中 . 表示上级目录；路径中 .. 表示当前目录
-</code></pre>
+<li><h1 id="Java语言特性-【开源、简单、强大、纯面向对象】"><a href="#Java语言特性-【开源、简单、强大、纯面向对象】" class="headerlink" title="Java语言特性 【开源、简单、强大、纯面向对象】"></a>Java语言特性 【开源、简单、强大、纯面向对象】</h1><ul>
+<li>简单性<ul>
+<li>相对而言的，例如Java中不再支持多继承，c++是支持多继承的，多继承比较复杂,c++中有指针，Java中屏蔽了指针的概念。</li>
+<li>所以相对来说Java是简单的。java语言底层是c++实现的，不是c语言。</li>
+</ul>
 </li>
-<li><h1 id="关于Java语言当中的注释"><a href="#关于Java语言当中的注释" class="headerlink" title="关于Java语言当中的注释"></a>关于Java语言当中的注释</h1><pre><code>  * 什么是注释？注释的作用是什么？
-      - 出现在Java的源文件当中，对Java源代码的解释说明
-      - 注释不会被编译到.class字节码文件当中
-      - 一个好的开发习惯应该是多编写注释，这样程序的可读性增强。
-  * Java中的注释怎么写
-      - 单行注释
-          //单行注释
-      - 多行注释
-          /*
-              多行注释
-              多行注释
-          * /
-      - Javadoc注释，该注释信息会通过Javadoc.exe工具解析提取到文档当中
-          /**
-          *    Javadoc注释
-          *    Javadoc注释
-          * /
-</code></pre>
+<li>面向对象：<br>Java是纯面向对象的。更符合人的思维模式，更容易理解。</li>
+<li>可移植性<ul>
+<li>什么是可移植性：<ul>
+<li>Java程序可以做到一次编译，到处运行,也就是说Java程序可以在不同系统上运行，可以做到跨平台使用，这就称为Java的可移植性</li>
+</ul>
 </li>
-<li><h1 id="public-class-和-class的区别："><a href="#public-class-和-class的区别：" class="headerlink" title="public class 和 class的区别："></a>public class 和 class的区别：</h1><pre><code>  * 一个Java源文件当中可以定义多个class文件
-  * 一个Java源文件当中public的class不是必须的
-  * 一个class会定义生成一个xxx.class字节码文件
-  * 一个Java源文件当中定义一个公开的类的话，public的class只能有一个，并且该类名必须和Java源文件名称一致。
-  * 每一个class当中都可以编写main方法，都可以设定程序的入口。
-      注意：.class当中必须有主方法，没有主方法会出现运行阶段的错误。
-</code></pre>
+<li>Windows和Linux内核肯定不同，他们两个操作系统执行指令的执行也是不一样的</li>
+<li>结论：显然Java程序不能直接和操作系统打交道，因为Java程序只有一份，操作系统执行原理和方式不同.解决办法就是引入一个介质JVM：SUN的团队很聪明，他们想到了一个办法，他们让Java程序运行在一台虚拟机当中，这个虚拟机叫做Java虚拟机，简称JVM。Java虚拟机再和底层的操作系统打交道。也就是官网下载的JDK包，里面包括了Java程序的所需的工具。</li>
+</ul>
+</li>
+<li>健壮性<ul>
+<li>和自动垃圾回收机制有关，自动垃圾回收机制简称GC机制。Java语言运行过程中产生的垃圾是自动回收的，不需要程序员关心。</li>
+</ul>
+</li>
+<li>安全性</li>
+<li>多线程</li>
+</ul>
+</li>
+<li><h1 id="关于Java的加载与执行"><a href="#关于Java的加载与执行" class="headerlink" title="关于Java的加载与执行"></a>关于Java的加载与执行</h1><ul>
+<li>Java程序的运行包括两个非常重要的阶段<ul>
+<li>编译阶段<ul>
+<li>编译阶段主要的任务是检查Java源程序是否符合Java语法，符合Java语法规则能够生成正常的字节码文件(xxx.class),不符合Java语法规则则无法生成字节码文件。</li>
+</ul>
+<ul>
+<li>字节码文件中不是纯粹的二进制，这种文件无法在操作系统当中直接执行。</li>
+<li>编译阶段的过程：<ul>
+<li>程序员需要在硬盘的某个位置新建一个.Java扩展名的文件，该文件被称为Java源文件，源文件当中编写的是Java源代码/源程序。而这个源程序是不能随意编写的，必须符合Java语法规则-Java语法规则是需要记忆的</li>
+<li>Java程序员需要使用JDK当中自带的Javac.exe命令进行Java程序的编译,一个Java源文件可以编译生成多个.class文件</li>
+<li>Javac怎么用呢？在哪用？<ul>
+<li>在DOS命令窗口使用</li>
+<li>Javac的使用规则：Javac Java源文件的路径</li>
+<li>Javac是一个Java编译器工具/命令</li>
+</ul>
+</li>
+<li>字节码文件/class文件是最终要执行的文件，所以说class文件生成之后，Java源文件删除并不会影响Java程序的执行。但是一般Java源程序不要删除，因为class文件最终执行效果可能不是我们想要的，那么这个时候需要修改Java源程序，然后将Java源程序重新编译生成新的class文件，然后再运行这个class程序，生成新的效果。</li>
+<li>编译结束后，也可以将class文件拷贝到其他操作系统执行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>运行阶段<ul>
+<li>JDK安装之后，除了自带一个Javac.exe之外，还有另一个工具/命令，叫做java.exe，主要负责运行阶段<ul>
+<li>在DOS窗口使用</li>
+<li>java.exe怎么用呢？</li>
+</ul>
+<ul>
+<li>java 类名(这个位置不是一个路径)</li>
+<li>例如：<ul>
+<li>在硬盘上有一个A.class，那么就这样用：Java A</li>
+<li>在硬盘上有一个B.class，那么就这样用：Java B.class【错误】</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>运行阶段的过程：<ul>
+<li>打开DOS窗口，切换到.class字节码文件当前目录下</li>
+<li>输入：java xx(.class字节码文件名称，后缀不用带)</li>
+<li>Java.exe命令会启动Java虚拟机(JVM),JVM会启动类加载器ClassLoader</li>
+<li>ClassLoader 会去硬盘上搜索A.class文件，找到该文件则将该文件装在到JVM当中。</li>
+<li>JVM将A.class字节码文件解释成二进制的数据，然后操作系统执行二进制和底层硬件平台进行交互。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="开始第一个Java程序"><a href="#开始第一个Java程序" class="headerlink" title="开始第一个Java程序"></a>开始第一个Java程序</h1><ul>
+<li>保证电脑上安装了文本编辑器</li>
+<li>安装JDK，这里我使用的是JDk8</li>
+<li>JDK、JRE、JVM的关系：JDK包含了JRE，JRE包含了JVM</li>
+<li>开发Hello World.Java源程序</li>
+<li>将Hello World.Java源程序通过Javac工具编译<ul>
+<li>首先需要解决的问题是：Javac命令是否可用</li>
+<li>打开DOS命令窗口，直接输入Javac，然后回车。<ul>
+<li>Windows操作系统提示出现错误“Javac不是内部命令”，出现这个问题是Windows找不到Javac，可以通过配置环境变量去解决该问题。</li>
+<li>macos操作系统会直接可用。</li>
+<li>Linux未知</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>运行Java程序<ul>
+<li>需要使用Java.exe命令</li>
+<li>首先测试Java命令是否可用</li>
+<li>然后将DOS窗口切换到.class文件的当前目录下</li>
+<li>最后运行.class文件</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="打开DOS窗口，执行Java-HelloWorld，执行原理是什么？"><a href="#打开DOS窗口，执行Java-HelloWorld，执行原理是什么？" class="headerlink" title="打开DOS窗口，执行Java HelloWorld，执行原理是什么？"></a>打开DOS窗口，执行Java HelloWorld，执行原理是什么？</h1><ul>
+<li>Java.exe命令会启动JVM</li>
+<li>JVM启动之后会启动类加载器ClassLoader</li>
+<li>ClassLoader会在硬盘上的某个位置搜索HelloWorld.class字节码文件</li>
+<li>找到该文件则执行</li>
+<li>找不到文件则报错</li>
+<li>疑问：ClassLoader是在哪个位置上搜搜HelloWorld.class字节码文件的？<ul>
+<li>默认情况下，ClassLoader去某个路径下加载xxx.class字节码文件。当然，也可以让ClassLoader去某个指定的路径下加载字节码文件，这时需要配置环境变量classpath</li>
+<li>classpath环境变量属于Java语言中的环境变量，不属于windows操作系统【PATH环境变量属于操作系统】</li>
+<li>classpath是给ClassLoader类加载器指路的</li>
+<li>设置环境变量打开DOS窗口在任意位置都可以执行.class文件</li>
+<li>classpath环境变量没有配置的话，类加载器会默认从当前路径下找字节码文件，当classpath环境变量配置为某个指定路径之后，类加载器只会去指定的路径加载字节码文件。</li>
+<li>所以每次执行.class程序时，需要在DOS窗口先切到.class字节码文件所在的路径下，然后再运行。</li>
+<li>classpath=.<ul>
+<li>注意：路径中 . 表示上级目录；路径中 .. 表示当前目录</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="关于Java语言当中的注释"><a href="#关于Java语言当中的注释" class="headerlink" title="关于Java语言当中的注释"></a>关于Java语言当中的注释</h1><ul>
+<li>什么是注释？注释的作用是什么？<ul>
+<li>出现在Java的源文件当中，对Java源代码的解释说明</li>
+<li>注释不会被编译到.class字节码文件当中</li>
+<li>一个好的开发习惯应该是多编写注释，这样程序的可读性增强。</li>
+</ul>
+</li>
+<li>Java中的注释怎么写<ul>
+<li>单行注释<br>  //单行注释</li>
+<li>多行注释<br>  /*<ul>
+<li>多行注释</li>
+<li>多行注释</li>
+<li><ul>
+<li>/</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Javadoc注释，该注释信息会通过Javadoc.exe工具解析提取到文档当中<br>  /**<ul>
+<li>   Javadoc注释</li>
+<li>   Javadoc注释</li>
+</ul>
+<ul>
+<li><ul>
+<li>/</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h1 id="public-class-和-class的区别："><a href="#public-class-和-class的区别：" class="headerlink" title="public class 和 class的区别："></a>public class 和 class的区别：</h1><ul>
+<li>一个Java源文件当中可以定义多个class文件</li>
+<li>一个Java源文件当中public的class不是必须的</li>
+<li>一个class会定义生成一个xxx.class字节码文件</li>
+<li>一个Java源文件当中定义一个公开的类的话，public的class只能有一个，并且该类名必须和Java源文件名称一致。</li>
+<li>每一个class当中都可以编写main方法，都可以设定程序的入口。<ul>
+<li>注意：.class当中必须有主方法，没有主方法会出现运行阶段的错误。</li>
+</ul>
+</li>
+</ul>
 </li>
 <li><h1 id="总结第一章内容："><a href="#总结第一章内容：" class="headerlink" title="总结第一章内容："></a>总结第一章内容：</h1><ul>
 <li>能够自己搭建Java的开发环境</li>
@@ -761,11 +824,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">哔哩哔哩</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">哔哩哔哩</a>
               </li>
             
             <div class="clearfix"></div>
