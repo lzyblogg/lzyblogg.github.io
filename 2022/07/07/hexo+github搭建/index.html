@@ -531,6 +531,29 @@
 
 
 
+  
+  <div id="gitment-ctn"></div>
+  
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
+  
+  <script>
+    <!-- id: "hexo+github搭建个人博客。以及各种问题详解。yilia-puls主题的使用详解" -->
+    var gitment = new Gitment({
+      id: "20220707095001",
+      owner: 'lzyblogg',
+      repo: 'yilia-plus-dome',
+      oauth: {
+        client_id: 'cf3791139ee6c3007578',
+        client_secret: '3786b057074769ab7ce884b647a70e5c98e51edd',
+      },
+    })
+    gitment.render('gitment-ctn')
+  </script>
+
+
+  
 
 
 
@@ -681,11 +704,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
