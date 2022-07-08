@@ -675,29 +675,33 @@
 
 
 
+
+    
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div> 
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "b1B70GQXrnACm1iqvRQ7rbgO-gzGzoHsz",
+            app_key: "q01D1bmJkscpeCcOR59GLfl7",
+            placeholder: "just go go",
+            avatar:"mm"
+        });
+    }
+</script>
+    </secttion>
   
-  <div id="gitment-ctn"></div>
-  
-    <!-- 中文 -->
-    <link rel="stylesheet" href="/lib/gitment.css">
-    <script src="/lib/gitment.js"></script>
-  
-  <script>
-    <!-- id: "Java第一天学习笔记，Java的发展史、Java的特性、Java的编译、执行Java程序" -->
-    var gitment = new Gitment({
-      id: "20220604145819",
-      owner: 'lzyblogg',
-      repo: 'yilia-plus-demo',
-      oauth: {
-        client_id: 'cf3791139ee6c3007578',
-        client_secret: '3786b057074769ab7ce884b647a70e5c98e51edd',
-      },
-    })
-    gitment.render('gitment-ctn')
-  </script>
 
 
-  
+
+
 
 
 
@@ -852,11 +856,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">网络基础 网络模型</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color5">网络基础 网络模型</a>
               </li>
              
               <li class="article-tag-list-item">
